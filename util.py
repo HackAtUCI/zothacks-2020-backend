@@ -12,8 +12,11 @@ class MongoEncoder(json.JSONEncoder):
 
 
 def mongo_id_decoder(obj):
-    # Convert str to Mongo Object ID
-    return ObjectId(obj)
+    # Try to convert str to Mongo Object ID
+    try:
+        return ObjectId(obj)
+    except Exception:
+        raise ValidationError("Invalid User Id Format", "_id")
 
 
 def validate_user_id(user_id):
@@ -22,7 +25,11 @@ def validate_user_id(user_id):
         raise ValidationError("Invalid User Id", "_id")
 
 
-def validate_stock_id(stock_id):
+def validate_stock_id(stock_id, field_name="_id"):
     stock = mongo.db.stock.find_one({"_id": ObjectId(stock_id)})
     if not stock:
-        raise ValidationError("Invalid Stock Id", "favoriteStockId")
+        raise ValidationError("Invalid Stock Id", field_name)
+
+
+def validate_user_stock_id(stock_id):
+    validate_stock_id(stock_id, field_name="favoriteStockId")

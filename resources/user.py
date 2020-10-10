@@ -3,7 +3,7 @@ from flask_restful import Resource
 from marshmallow import Schema, fields
 from webargs.flaskparser import use_args
 from db import mongo
-from util import mongo_id_decoder, validate_user_id, validate_stock_id
+from util import mongo_id_decoder, validate_user_id, validate_user_stock_id
 
 
 class GetSchema(Schema):
@@ -19,7 +19,7 @@ class PostSchema(Schema):
     firstName = fields.Str(required=True)
     lastName = fields.Str(required=True)
     favoriteStockId = fields.Str(
-        deserialize=mongo_id_decoder, validate=validate_stock_id, required=True
+        deserialize=mongo_id_decoder, validate=validate_user_stock_id, required=True
     )
 
 
@@ -34,7 +34,7 @@ class PutBodySchema(Schema):
     firstName = fields.Str(required=True)
     lastName = fields.Str(required=True)
     favoriteStockId = fields.Str(
-        deserialize=mongo_id_decoder, validate=validate_stock_id, required=True
+        deserialize=mongo_id_decoder, validate=validate_user_stock_id, required=True
     )
 
 
