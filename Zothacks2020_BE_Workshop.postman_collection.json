@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"test2@gmail.com\",\n\t\"firstName\": \"Test\",\n\t\"lastName\": \"User\"\n}",
+							"raw": "{\n\t\"email\": \"possiblylassesemail@gmail.com\",\n\t\"firstName\": \"Lasse\",\n\t\"lastName\": \"Nordahl\",\n    \"favoriteStockId\": \"5f8219d1be9168a7cee37a82\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -52,7 +52,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/user?_id=5f7ea7d75eb9455d67953e12",
+							"raw": "{{url}}/user",
 							"host": [
 								"{{url}}"
 							],
@@ -62,7 +62,23 @@
 							"query": [
 								{
 									"key": "_id",
-									"value": "5f7ea7d75eb9455d67953e12"
+									"value": "5f82105ee32bd1b360c35a4b",
+									"disabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "Test",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "User",
+									"disabled": true
+								},
+								{
+									"key": "favoriteStockId",
+									"value": "5f820fb53e6451ed90bd24d2",
+									"disabled": true
 								}
 							]
 						}
@@ -76,7 +92,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"test2@gmail.com\",\n\t\"firstName\": \"NEW Test\",\n\t\"lastName\": \"User\"\n}",
+							"raw": "{\n\t\"email\": \"possiblylassesemail@gmail.com\",\n\t\"firstName\": \"Lasse\",\n\t\"lastName\": \"Nordahl\",\n    \"favoriteStockId\": \"5f821a01be9168a7cee37a83\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -84,7 +100,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/user?_id=5f7ea7d75eb9455d67953e13",
+							"raw": "{{url}}/user?_id=5f821c36be9168a7cee37a86",
 							"host": [
 								"{{url}}"
 							],
@@ -94,7 +110,7 @@
 							"query": [
 								{
 									"key": "_id",
-									"value": "5f7ea7d75eb9455d67953e13"
+									"value": "5f821c36be9168a7cee37a86"
 								}
 							]
 						}
@@ -146,7 +162,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"companyName\": \"Microsoft\",\n\t\"symbol\": \"MSFT\"\n}",
+							"raw": "{\n\t\"companyName\": \"Amazon\",\n\t\"symbol\": \"AMZN\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -183,7 +199,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/stock?_id=5f7ea95f5eb9455d67953e13",
+							"raw": "{{url}}/stock",
 							"host": [
 								"{{url}}"
 							],
@@ -193,7 +209,18 @@
 							"query": [
 								{
 									"key": "_id",
-									"value": "5f7ea95f5eb9455d67953e13"
+									"value": "5f8219b2be9168a7cee37a81",
+									"disabled": true
+								},
+								{
+									"key": "companyName",
+									"value": "Microsoft",
+									"disabled": true
+								},
+								{
+									"key": "symbol",
+									"value": "MSFT",
+									"disabled": true
 								}
 							]
 						}
@@ -207,7 +234,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"companyName\": \"Tesla\",\n\t\"symbol\": \"TSLA\"\n}",
+							"raw": "{\n\t\"companyName\": \"Microsoft\",\n\t\"symbol\": \"MSFT\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -215,7 +242,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/stock?_id=5f7ea95f5eb9455d67953e13",
+							"raw": "{{url}}/stock?_id=5f8219b2be9168a7cee37a81",
 							"host": [
 								"{{url}}"
 							],
@@ -225,7 +252,7 @@
 							"query": [
 								{
 									"key": "_id",
-									"value": "5f7ea95f5eb9455d67953e13"
+									"value": "5f8219b2be9168a7cee37a81"
 								}
 							]
 						}
@@ -247,7 +274,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/stock?_id=5f7ea95f5eb9455d67953e13",
+							"raw": "{{url}}/stock?_id=5f821b52be9168a7cee37a85",
 							"host": [
 								"{{url}}"
 							],
@@ -257,7 +284,7 @@
 							"query": [
 								{
 									"key": "_id",
-									"value": "5f7ea95f5eb9455d67953e13"
+									"value": "5f821b52be9168a7cee37a85"
 								}
 							]
 						}
