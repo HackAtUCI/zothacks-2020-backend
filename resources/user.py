@@ -11,14 +11,14 @@ class GetSchema(Schema):
     email = fields.Email()
     firstName = fields.Str()
     lastName = fields.Str()
-    favoriteStockId = fields.Str(deserialize=mongo_id_decoder)
+    favoriteStockId = fields.Function(deserialize=mongo_id_decoder)
 
 
 class PostSchema(Schema):
     email = fields.Email(required=True)
     firstName = fields.Str(required=True)
     lastName = fields.Str(required=True)
-    favoriteStockId = fields.Str(
+    favoriteStockId = fields.Function(
         deserialize=mongo_id_decoder, validate=validate_user_stock_id, required=True
     )
 
@@ -33,7 +33,7 @@ class PutBodySchema(Schema):
     email = fields.Email(required=True)
     firstName = fields.Str(required=True)
     lastName = fields.Str(required=True)
-    favoriteStockId = fields.Str(
+    favoriteStockId = fields.Function(
         deserialize=mongo_id_decoder, validate=validate_user_stock_id, required=True
     )
 

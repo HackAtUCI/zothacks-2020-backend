@@ -20,13 +20,13 @@ def mongo_id_decoder(obj):
 
 
 def validate_user_id(user_id):
-    user = mongo.db.user.find_one({"_id": ObjectId(user_id)})
+    user = mongo.db.user.find_one({"_id": user_id})
     if not user:
         raise ValidationError("Invalid User Id", "_id")
 
 
 def validate_stock_id(stock_id, field_name="_id"):
-    stock = mongo.db.stock.find_one({"_id": ObjectId(stock_id)})
+    stock = mongo.db.stock.find_one({"_id": stock_id})
     if not stock:
         raise ValidationError("Invalid Stock Id", field_name)
 
