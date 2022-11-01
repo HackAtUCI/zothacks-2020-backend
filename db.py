@@ -13,6 +13,12 @@ from pymongo import MongoClient
 # This is only a sample, so the `.env.sample` is used. For your project, you should
 # use `.env`. BE SURE TO INCLUDE THIS FILE IN YOUR `.gitignore` FILE OR ELSE YOUR
 # MONGODB CREDENTIALS WILL BE PUBLISHED TO GITHUB!
+# 
+# Disclaimer: The URIs in this file are only meant to be used for this sample.
+# Please create your own collection to store your data.
+# 
+# https://www.mongodb.com/docs/atlas/getting-started/
+
 load_dotenv('.env.sample')
 
 client = MongoClient(os.getenv("MONGO_URI_MASTER"))
