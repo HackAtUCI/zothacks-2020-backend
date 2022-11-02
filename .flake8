@@ -1,2 +1,13 @@
+# flake8 is a style guide for Python files. To check whether your code
+# adheres to flake8's style conventions, simply run
+#
+# flake8
+#
+# in a terminal after the package has been installed.
+# You can edit this file to exclude directories or files by adding
+# 
+# exclude = venv,.git,...
+#
+# under the line containing "[flake8]".
 [flake8]
 max-line-length = 88

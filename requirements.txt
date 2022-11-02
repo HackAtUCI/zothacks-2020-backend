@@ -1,3 +1,12 @@
+"""
+This file contains a list of packages that this application needs in order for it to
+function properly. To install them, run the following command:
+
+$ pip install -r requirements.txt
+
+and wait for the packages to be installed.
+"""
+
 gunicorn
 pymongo[gssapi,srv,tls]
 flask-cors
